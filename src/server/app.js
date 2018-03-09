@@ -11,6 +11,8 @@ app.get('/', function (req, res) {
 var data = [];
 
 io.on('connection', function (socket) {
+  console.log('user connected');
+  
   socket.on('my client event', function (data) {
     console.log(data);
   });
@@ -22,5 +24,9 @@ io.on('connection', function (socket) {
     socket.emit('data files', data);
   });
 
+
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
 });
     

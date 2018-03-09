@@ -31,7 +31,7 @@ module.exports = {
 	},
 
 	module: {
-		// rules: [
+		rules: [
 		// 	 {
 		// 	 enforce: 'pre', //to check source files, not modified by other loaders (like babel-loader)
 		// 	 test: /\.js$/,
