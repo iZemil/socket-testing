@@ -21,9 +21,10 @@
     "type": "git",
     "url": "https://github.com/jluccisano/webpack-es6-boilerplate.git"
   },
-  "main": "src/index.js",
+  "main": "src/client/index.js",
   "scripts": {
-    "start": "webpack-dev-server --config conf/webpack.dev.js",
+    "client": "webpack-dev-server --config conf/webpack.dev.js",
+    "server": "nodemon src/server/app.js",
     "build": "webpack --env=prod --progress --profile --colors",
     "lint": "eslint ./src/**.js",
     "coverage": "jest --coverage --config=conf/jest.config.js",
@@ -50,5 +51,10 @@
     "webpack-dev-server": "2.7.1",
     "webpack-merge": "4.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.17.1",
+    "phaser": "^3.2.0",
+    "socket.io": "^2.0.4"
+  }
 }
